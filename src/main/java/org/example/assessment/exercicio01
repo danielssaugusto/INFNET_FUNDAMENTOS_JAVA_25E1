@@ -1,0 +1,314 @@
+# Configuração do Ambiente Java
+
+## Objetivo
+
+Configurar um ambiente básico para desenvolvimento Java utilizando:
+
+- JDK
+- IntelliJ IDEA
+- Projeto Java
+- Terminal
+
+Ao final, o programa deverá imprimir:
+
+```text
+Olá, meu nome é [Seu Nome] e estou aprendendo Java!
+```
+
+---
+
+## 1. Instalar o JDK
+
+O JDK é necessário para desenvolver e executar programas Java.
+
+Baixe o JDK no site oficial:
+
+[Download do JDK - Oracle](https://www.oracle.com/java/technologies/downloads/)
+
+No Windows, baixe o instalador:
+
+```text
+Windows x64 Installer
+```
+
+Instale normalmente.
+
+> [!TIP]
+> Durante a instalação, mantenha o caminho padrão. Você precisará saber onde o JDK foi instalado.
+
+---
+
+## 2. Verificar a instalação
+
+Abra o PowerShell ou CMD e execute:
+
+```bash
+java -version
+```
+
+Depois:
+
+```bash
+javac -version
+```
+
+Se os comandos mostrarem a versão do Java, a instalação está funcionando.
+
+Exemplo:
+
+```text
+java version "27..."
+javac 27...
+```
+
+### Print 1
+
+Tire um print do terminal mostrando:
+
+```bash
+java -version
+```
+
+Esse print faz parte da entrega.
+
+---
+
+## 3. Configurar as variáveis de ambiente
+
+No Windows, procure no menu iniciar por:
+
+```text
+Variáveis de ambiente
+```
+
+Abra:
+
+```text
+Editar as variáveis de ambiente do sistema
+```
+
+Depois:
+
+```text
+Variáveis de Ambiente
+```
+
+Crie uma variável chamada:
+
+```text
+JAVA_HOME
+```
+
+ apontando para a pasta onde o JDK foi instalado.
+
+Exemplo:
+
+```text
+JAVA_HOME=C:\Program Files\Java\jdk-27
+```
+
+Depois edite a variável `Path` e adicione:
+
+```text
+%JAVA_HOME%\bin
+```
+
+Abra um novo terminal e teste novamente:
+
+```bash
+java -version
+```
+
+> [!TIP]
+> Se `java -version` funcionar, o Windows está encontrando o Java corretamente.
+
+---
+
+## 4. Instalar a IntelliJ IDEA
+
+Baixe a IntelliJ IDEA no site oficial:
+
+[IntelliJ IDEA - JetBrains](https://www.jetbrains.com/idea/)
+
+Instale normalmente.
+
+---
+
+## 5. Criar o projeto
+
+Abra a IntelliJ IDEA e selecione:
+
+```text
+New Project
+```
+
+Configure:
+
+```text
+Name:
+MinhaPrimeiraApp
+
+Language:
+Java
+
+JDK:
+JDK instalado anteriormente
+```
+
+Crie o projeto.
+
+---
+
+## 6. Conferir o JDK
+
+Na IntelliJ, abra:
+
+```text
+File
+→ Project Structure
+→ Project
+```
+
+Verifique:
+
+```text
+Project SDK
+```
+
+Selecione o JDK instalado.
+
+Exemplo:
+
+```text
+Project SDK: JDK 27
+```
+
+### Print 2
+
+Tire um print mostrando a configuração do:
+
+```text
+Project SDK
+```
+
+Esse print faz parte da entrega.
+
+---
+
+## 7. Criar a classe OlaMundo
+
+Dentro da pasta `src`:
+
+```text
+Botão direito em src
+→ New
+→ Java Class
+```
+
+Digite:
+
+```text
+OlaMundo
+```
+
+---
+
+## 8. Criar o programa
+
+Dentro da classe `OlaMundo`, escreva:
+
+```java
+public class OlaMundo {
+
+    public static void main(String[] args) {
+
+        System.out.println(
+            "Olá, meu nome é [Seu Nome] e estou aprendendo Java!"
+        );
+
+    }
+}
+```
+
+Substitua `[Seu Nome]` pelo seu nome.
+
+Exemplo:
+
+```java
+System.out.println(
+    "Olá, meu nome é Daniel e estou aprendendo Java!"
+);
+```
+
+---
+
+## 9. Fazer o Build
+
+Na IntelliJ, vá em:
+
+```text
+Build
+→ Build Project
+```
+
+A IDE irá compilar o projeto.
+
+Se não houver erros, o projeto foi compilado corretamente.
+
+> [!TIP]
+> Build significa, de forma simples, preparar/compilar o código do projeto para que ele possa ser executado.
+
+---
+
+## 10. Executar o programa
+
+Abra o arquivo:
+
+```text
+OlaMundo.java
+```
+
+Clique no botão de execução ao lado do método:
+
+```java
+public static void main(String[] args)
+```
+
+Selecione:
+
+```text
+Run 'OlaMundo'
+```
+
+O console da IntelliJ deverá mostrar:
+
+```text
+Olá, meu nome é Daniel e estou aprendendo Java!
+```
+
+---
+
+# Checklist da entrega
+
+- [ ] JDK instalado
+- [ ] `java -version` funcionando
+- [ ] Variáveis de ambiente configuradas
+- [ ] IntelliJ IDEA instalada
+- [ ] Projeto `MinhaPrimeiraApp` criado
+- [ ] JDK configurado na IntelliJ
+- [ ] Classe `OlaMundo` criada
+- [ ] Programa funcionando
+- [ ] Build realizado
+- [ ] Programa executado no console
+- [ ] Print do `java -version`
+- [ ] Print da configuração do JDK
+- [ ] Print da execução no console
+
+---
+
+# Links
+
+- [Download do JDK - Oracle](https://www.oracle.com/java/technologies/downloads/)
+- [IntelliJ IDEA - JetBrains](https://www.jetbrains.com/idea/)
+- [Documentação Java - Oracle](https://docs.oracle.com/en/java/)
+- [Documentação IntelliJ IDEA - JetBrains](https://www.jetbrains.com/help/idea/)

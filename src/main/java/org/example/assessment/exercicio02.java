@@ -1,19 +1,8 @@
-package org.example.exerciciosAT;
-
-/*
-Crie um programa que:
-
-Solicite ao usuário seu nome e uma senha.
-A senha deve:
-Ter no mínimo 8 caracteres.
-Conter pelo menos uma letra maiúscula, um número e um caractere especial (@, #, $, etc.).
-Caso a senha seja inválida, o programa deve informar o erro específico e solicitar uma nova tentativa.
-*/
-
+package org.example.assessment;
 
 import java.util.Scanner;
 
-public class PasswordValidation {
+public class exercicio02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -32,7 +21,6 @@ public class PasswordValidation {
         sc.close();
     }
 
-    // Validação da senha
     public static boolean passwordValidation(String name, String password) {
 
         if (password.length() < 8) {
@@ -61,7 +49,6 @@ public class PasswordValidation {
         return true;
     }
 
-    // Verificar se há pelo menos uma letra maiúscula
     public static boolean isUpperCase(String password) {
         for (char charactere : password.toCharArray()) {
             if (Character.isUpperCase(charactere)) {
@@ -71,7 +58,6 @@ public class PasswordValidation {
         return false;
     }
 
-    // Verificar se há um número
     public static boolean isNumber(String password) {
         for (char charactere : password.toCharArray()) {
             if (Character.isDigit(charactere)) {
@@ -81,7 +67,6 @@ public class PasswordValidation {
         return false;
     }
 
-    // Verificar se há um caractere especial
     public static boolean isSpecialChar(String password) {
         for (char charactere : password.toCharArray()) {
             if (!Character.isLetterOrDigit(charactere)) {
