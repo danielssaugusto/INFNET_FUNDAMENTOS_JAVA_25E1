@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class exercicio04 {
     public static void main(String[] args) {
-
+        initialMenu();
     }
 
     public static void initialMenu() {
@@ -30,6 +30,23 @@ public class exercicio04 {
             installments = sc.nextByte();
         } while (installments < 6 || installments > 48);
 
-        System.out.printf("Hello, %s! Your loan amount is: %f.2%n", name, loanAmount);
+        calculator(name, loanAmount, installments);
+    }
+
+    public static void calculator(String name, double loanAmount, byte installments) {
+        double MONTHLY_INTEREST_RATE = 0.03;
+
+        double amountPerMonth = loanAmount / installments;
+        double interestAmount = amountPerMonth * MONTHLY_INTEREST_RATE;
+        double totalAmountWithInterest = amountPerMonth + interestAmount;
+        double finalTotalAmount = totalAmountWithInterest * installments;
+
+        System.out.printf("""
+                   Hello, %s!%n
+                   Loan amount: %.2f%n
+                   Installments: %d%n
+                   Interest amount per month: %.2f%n
+                   Final total amount: %.2f%n
+                   """, name, loanAmount, installments, interestAmount, finalTotalAmount);
     }
 }
