@@ -1,28 +1,8 @@
 # Configuração do Ambiente Java
 
-## Objetivo
-
-Configurar um ambiente básico para desenvolvimento Java utilizando:
-
-- JDK
-- IntelliJ IDEA
-- Projeto Java
-- Terminal
-
-Ao final, o programa deverá imprimir:
-
-```text
-Olá, meu nome é [Seu Nome] e estou aprendendo Java!
-```
-
----
-
 ## 1. Instalar o JDK
 
 O JDK é necessário para desenvolver e executar programas Java.
-
-Baixe o JDK no site oficial:
-
 [Download do JDK - Oracle](https://www.oracle.com/java/technologies/downloads/)
 
 No Windows, baixe o instalador:
@@ -30,8 +10,6 @@ No Windows, baixe o instalador:
 ```text
 Windows x64 Installer
 ```
-
-Instale normalmente.
 
 > [!TIP]
 > Durante a instalação, mantenha o caminho padrão. Você precisará saber onde o JDK foi instalado.
@@ -53,25 +31,6 @@ javac -version
 ```
 
 Se os comandos mostrarem a versão do Java, a instalação está funcionando.
-
-Exemplo:
-
-```text
-java version "27..."
-javac 27...
-```
-
-### Print 1
-
-Tire um print do terminal mostrando:
-
-```bash
-java -version
-```
-
-Esse print faz parte da entrega.
-
----
 
 ## 3. Configurar as variáveis de ambiente
 
@@ -183,16 +142,6 @@ Exemplo:
 Project SDK: JDK 27
 ```
 
-### Print 2
-
-Tire um print mostrando a configuração do:
-
-```text
-Project SDK
-```
-
-Esse print faz parte da entrega.
-
 ---
 
 ## 7. Criar a classe OlaMundo
@@ -236,7 +185,7 @@ Exemplo:
 
 ```java
 System.out.println(
-    "Olá, meu nome é Daniel e estou aprendendo Java!"
+    "Olá, meu nome é [Seu Nome] e estou aprendendo Java!"
 );
 ```
 
